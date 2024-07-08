@@ -40,10 +40,17 @@ const getPlayerChoice = (event) => {
     playerChoice = event.target.id;
 };
 
+const getComputerChoice = () => {
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    computerChoice = choices[randomIndex];
+};
+
 const play = (event) => {
     // console.log(event.target);
     getPlayerChoice(event);
     console.log(playerChoice);
+    getComputerChoice();
+    console.log(computerChoice);
 };
 
 /*----------------------------- Event Listeners -----------------------------*/
