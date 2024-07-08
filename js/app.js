@@ -36,3 +36,11 @@ const resultDisplayEl = document.querySelector("#result-display");
 /*-------------------------------- Functions --------------------------------*/
 
 /*----------------------------- Event Listeners -----------------------------*/
+
+// document.querySelector("#rock").addEventListener("click", play);
+// document.querySelector("#paper").addEventListener("click", play);
+// document.querySelector("#scissors").addEventListener("click", play);
+// DRY
+document.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click, play");
+});
