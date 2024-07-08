@@ -64,7 +64,7 @@ const compare = () => {
 
 const render = () => {
     resultDisplayEl.textContent = `You chose ${playerChoice} and the computer chose ${computerChoice}. ${msg}`;
-}
+};
 
 const play = (event) => {
     // console.log(event.target);
@@ -77,12 +77,18 @@ const play = (event) => {
     render(); // renders result message back to the user
 };
 
+const resetGame = () => {
+    playerChoice = null;
+    computerChoice = null;
+    msg = "";  // also clear any displayed messages or game outcomes on the page.
+    resultDisplayEl.textContent = "";
+};
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 // document.querySelector("#rock").addEventListener("click", play);
 // document.querySelector("#paper").addEventListener("click", play);
 // document.querySelector("#scissors").addEventListener("click", play);
 // DRY
-document.querySelectorAll("button").forEach((button) => {
-    button.addEventListener("click", play);
-});
+document.querySelectorAll("main").forEach((button) => { button.addEventListener("click", play) });
+document.querySelector("#resetButton").addEventListener("click", resetGame);

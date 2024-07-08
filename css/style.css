@@ -32,3 +32,7 @@ button:hover {
     border: 1px solid rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
+
+#resetButton {
+    font-size: 20px;
+}
