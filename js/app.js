@@ -35,9 +35,16 @@ const resultDisplayEl = document.querySelector("#result-display");
 
 /*-------------------------------- Functions --------------------------------*/
 
+const getPlayerChoice = (event) => {
+    // console.log("getPlayerChoice: ", event);
+    playerChoice = event.target.id;
+};
+
 const play = (event) => {
-    console.log(event.target);
-}
+    // console.log(event.target);
+    getPlayerChoice(event);
+    console.log(playerChoice);
+};
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -46,5 +53,5 @@ const play = (event) => {
 // document.querySelector("#scissors").addEventListener("click", play);
 // DRY
 document.querySelectorAll("button").forEach((button) => {
-    button.addEventListener("click, play");
+    button.addEventListener("click", play);
 });
