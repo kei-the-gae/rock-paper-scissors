@@ -45,12 +45,31 @@ const getComputerChoice = () => {
     computerChoice = choices[randomIndex];
 };
 
+const compare = () => {
+    if (playerChoice === computerChoice) {
+        msg = 'You tied!';
+    } else if (playerChoice === choices[0] && computerChoice === choices[2]) {
+        // "rock" vs. "scissors"
+        msg = 'Congrats! You win!';
+    } else if (playerChoice === choices[1] && computerChoice === choices[0]) {
+        // "paper" vs. "rock"
+        msg = 'Congrats! You win!';
+    } else if (playerChoice === choices[2] && computerChoice === choices[1]) {
+        // "scissors" vs. "paper"
+        msg = 'Congrats! You win!';
+    } else {
+        msg = 'You lose! Try again?';
+    };
+};
+
 const play = (event) => {
     // console.log(event.target);
     getPlayerChoice(event);
     console.log(playerChoice);
     getComputerChoice();
     console.log(computerChoice);
+    compare();
+    console.log(msg);
 };
 
 /*----------------------------- Event Listeners -----------------------------*/
