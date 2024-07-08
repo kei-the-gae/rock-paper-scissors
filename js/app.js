@@ -35,6 +35,10 @@ const resultDisplayEl = document.querySelector("#result-display");
 
 /*-------------------------------- Functions --------------------------------*/
 
+const play = (event) => {
+    console.log(event.target);
+}
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 // document.querySelector("#rock").addEventListener("click", play);
