@@ -62,14 +62,19 @@ const compare = () => {
     };
 };
 
+const render = () => {
+    resultDisplayEl.textContent = `You chose ${playerChoice} and the computer chose ${computerChoice}. ${msg}`;
+}
+
 const play = (event) => {
     // console.log(event.target);
-    getPlayerChoice(event);
-    console.log(playerChoice);
-    getComputerChoice();
-    console.log(computerChoice);
-    compare();
-    console.log(msg);
+    getPlayerChoice(event); // captures player choice, updates state
+    // console.log(playerChoice);
+    getComputerChoice(); // randomly selects computer's choice, updates state
+    // console.log(computerChoice);
+    compare(); // determines winning result
+    // console.log(msg);
+    render(); // renders result message back to the user
 };
 
 /*----------------------------- Event Listeners -----------------------------*/
